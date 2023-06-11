@@ -1,0 +1,42 @@
+.game-play{
+    /* background-color: #ff0000; */
+    width: 100%;
+    height: 100%;
+}
+.main-game-board{
+    background-color: orange;
+    height: 67vh;
+    aspect-ratio: 1/1;
+    border: 1px solid orange;
+    position: relative;
+}
+.main-game-board .block-row{
+    /* background-color: blue; */
+    /* gap: 0.4rem; */
+    position: absolute;
+}
+.main-game-board .block-row.top{
+    top: -13.5vh;
+    /* bottom: 1px; */
+}
+.main-game-board .block-row.right{
+    right: -13.5vh;
+    top: -1.5px;
+    background-color: blueviolet;
+}
+.main-game-board .block-row.bottom{
+    bottom: -13.4vh;
+    background-color: red;
+    right: -1px;
+}
+.main-game-board .block-row.left{
+    background-color: yellow;
+    left: -13.4vh;
+    bottom: -1px;
+}
+.game-board-block{
+    background-color: rgba(0, 128, 0, 0.453);
+    height: 13.4vh;
+    border: 1px solid gray;
+    aspect-ratio: 1/1;
+}
