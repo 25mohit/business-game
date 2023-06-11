@@ -1,9 +1,10 @@
 import GameBoardBlock from '../../Utils/GameBoardBlock/GameBoardBlock'
 import { GameBlockList } from '../../Utils/GameBoardBlock/GameBoardBlockList'
+import GameBoardCenterContainer from '../../Utils/GameBoardCenterContainer/GameBoardCenterContainer';
 
 const MainBoard = () => {
 
-  console.log("GameBlockList", GameBlockList);
+  console.log("GameBlockList", GameBlockList.length);
 
   return (
     <div className='main-game-board'>
@@ -26,6 +27,9 @@ const MainBoard = () => {
         {
           GameBlockList?.slice(18,24).map((ticket, ind) => <GameBoardBlock key={ind} ticket={ticket}/>)
         }
+      </div>
+      <div className="game-center-container flex-center">
+          <GameBoardCenterContainer />
       </div>
     </div>
   )

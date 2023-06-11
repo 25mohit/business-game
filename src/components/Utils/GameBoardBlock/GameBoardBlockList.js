@@ -1,5 +1,4 @@
 export const GameBlockList = [
-    // topList:[
         {
             typeTicket: true,
             cityName: "Jaipur",
@@ -92,8 +91,32 @@ export const GameBlockList = [
         },
         {
             typeTicket: true,
+            cityName: "Railways",
+            ticketPrice: "1000"
+        },
+        {
+            typeTicket: true,
             cityName: "Mahabalipuram",
             ticketPrice: "1000"
         },
-    // ]
+        {
+            typeTicket: true,
+            cityName: "Ujjain",
+            ticketPrice: "1000"
+        },
+        {
+            typeTicket: true,
+            cityName: "Mount Abu",
+            ticketPrice: "1000"
+        },
+        {
+            typeTicket: true,
+            cityName: "Srinagar",
+            ticketPrice: "1000"
+        },
+        {
+            typeTicket: true,
+            cityName: "Pune",
+            ticketPrice: "1000"
+        },
 ]

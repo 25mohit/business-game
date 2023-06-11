@@ -3,7 +3,7 @@
     height: 100%;
 }
 .main-game-board{
-    background-color: orange;
+    background-color: rgba(237, 237, 237, 0.734);
     height: 67vh;
     aspect-ratio: 1/1;
     border: 1px solid orange;
@@ -20,6 +20,12 @@
     top: -1.5px;
     background-color: blueviolet;
 }
+.main-game-board .block-row.right .game-board-block{
+    transform: rotate(-90deg);
+}
+.main-game-board .block-row.left .game-board-block{
+    transform: rotate(90deg);
+}
 .main-game-board .block-row.bottom{
     bottom: -13.4vh;
     background-color: red;
@@ -30,12 +36,18 @@
     left: -13.4vh;
     bottom: -1px;
 }
+.main-game-board .game-center-container{
+    /* background-color: green; */
+    height: 100%;
+    overflow: hidden;
+}
 .game-board-block{
     background-color: rgba(0, 128, 0, 0.453);
     height: 13.4vh;
     border: 1px solid gray;
     aspect-ratio: 1/1;
     padding: 0.4rem;
+    overflow: hidden;
 }
 .game-board-block.city-ticket{
     display: flex;
@@ -57,4 +69,23 @@
     height: 5px;
     border-radius: 10px;
     transform: rotate(-5deg);
+}
+.game-inner-container{
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    gap: 2rem;
+}
+.game-activity{
+    background-color: white;
+    border-radius: 15px;
+    padding: 0.4rem;
+    box-shadow: 0 0 15px 2px rgba(45,45,45,0.2);
+    aspect-ratio: 1/1;
+    width: 46%;
+    cursor: pointer;
 }
