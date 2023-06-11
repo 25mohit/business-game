@@ -4,8 +4,6 @@ import GameBoardCenterContainer from '../../Utils/GameBoardCenterContainer/GameB
 
 const MainBoard = () => {
 
-  console.log("GameBlockList", GameBlockList.length);
-
   return (
     <div className='main-game-board'>
       <div className="block-row flex top">

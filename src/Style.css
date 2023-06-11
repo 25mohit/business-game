@@ -6,19 +6,34 @@
     background-color: rgba(237, 237, 237, 0.734);
     height: 67vh;
     aspect-ratio: 1/1;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     position: relative;
 }
 .main-game-board .block-row{
     position: absolute;
 }
 .main-game-board .block-row.top{
-    top: -13.5vh;
+    top: -13.4vh;
 }
 .main-game-board .block-row.right{
     right: -13.5vh;
-    top: -1.5px;
-    background-color: blueviolet;
+    top: -0px;
+}
+.main-game-board .block-row.left{
+    left: -13.2vh;
+    bottom: -0.5px;
+}
+.main-game-board .block-row.top > div:last-child{
+    border-top-right-radius: 10px;
+}
+.main-game-board .block-row.right > div:last-child{
+    border-bottom-left-radius: 10px;
+}
+.main-game-board .block-row.bottom > div:nth-child(1){
+    border-bottom-left-radius: 10px;
+}
+.main-game-board .block-row.left > div:nth-child(1){
+    border-bottom-left-radius: 10px;
 }
 .main-game-board .block-row.right .game-board-block{
     transform: rotate(-90deg);
@@ -28,13 +43,7 @@
 }
 .main-game-board .block-row.bottom{
     bottom: -13.4vh;
-    background-color: red;
     right: -1px;
-}
-.main-game-board .block-row.left{
-    background-color: yellow;
-    left: -13.4vh;
-    bottom: -1px;
 }
 .main-game-board .game-center-container{
     /* background-color: green; */
@@ -48,6 +57,7 @@
     aspect-ratio: 1/1;
     padding: 0.4rem;
     overflow: hidden;
+    cursor: pointer;
 }
 .game-board-block.city-ticket{
     display: flex;
@@ -71,21 +81,26 @@
     transform: rotate(-5deg);
 }
 .game-inner-container{
-    /* background-color: red; */
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 1.5rem;
-    gap: 2rem;
+    padding: 0.8rem;
+    gap: 1.35rem;
 }
-.game-activity{
-    background-color: white;
-    border-radius: 15px;
+.game-instruction{
+    background-color: rgba(255, 255, 255, 0.479);
+    border-radius: 8px;
     padding: 0.4rem;
-    box-shadow: 0 0 15px 2px rgba(45,45,45,0.2);
+    box-shadow: 0 0 5px 1px rgba(150,150,150,0.2);
     aspect-ratio: 1/1;
     width: 46%;
     cursor: pointer;
+}
+.game-instruction > header{
+    gap: 0.4rem;
+}
+.game-instruction > header > p{
+    font-size: 0.8rem;
 }

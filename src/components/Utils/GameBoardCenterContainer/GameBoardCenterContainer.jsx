@@ -1,13 +1,13 @@
 import React from 'react'
-import GameActivityContainer from '../GameActivityContainer/GameActivityContainer'
+import GameActivityContainer from '../GameInstructionContainer/GameInstructionContainer'
+import { InstructionsList } from '../GameInstructionContainer/GameInstructionsList'
 
 const GameBoardCenterContainer = () => {
   return (
     <div className='game-inner-container'>
-        <GameActivityContainer />
-        <GameActivityContainer />
-        <GameActivityContainer />
-        <GameActivityContainer />
+      {
+        InstructionsList?.map((instrution, index) => <GameActivityContainer instrution={instrution} key={index}/>)
+      }
     </div>
   )
 }
