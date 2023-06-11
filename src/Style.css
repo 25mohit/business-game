@@ -1,5 +1,4 @@
 .game-play{
-    /* background-color: #ff0000; */
     width: 100%;
     height: 100%;
 }
@@ -11,13 +10,10 @@
     position: relative;
 }
 .main-game-board .block-row{
-    /* background-color: blue; */
-    /* gap: 0.4rem; */
     position: absolute;
 }
 .main-game-board .block-row.top{
     top: -13.5vh;
-    /* bottom: 1px; */
 }
 .main-game-board .block-row.right{
     right: -13.5vh;
@@ -39,4 +35,26 @@
     height: 13.4vh;
     border: 1px solid gray;
     aspect-ratio: 1/1;
+    padding: 0.4rem;
+}
+.game-board-block.city-ticket{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+.city-name{
+    color: red;
+}
+.ticket-price{
+    color: green;
+    font-size: 0.9rem;
+}
+.bar{
+    background-color: orange;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    transform: rotate(-5deg);
 }
