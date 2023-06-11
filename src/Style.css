@@ -6,9 +6,8 @@
     background-color: rgba(237, 237, 237, 0.734);
     height: 67vh;
     aspect-ratio: 1/1;
-    /* border: 1px solid orange; */
     position: relative;
-}
+}   
 .main-game-board .block-row{
     position: absolute;
 }
@@ -46,7 +45,6 @@
     right: -1px;
 }
 .main-game-board .game-center-container{
-    /* background-color: green; */
     height: 100%;
     overflow: hidden;
 }
@@ -59,7 +57,52 @@
     overflow: hidden;
     cursor: pointer;
 }
-.game-board-block.city-ticket{
+
+.piece{
+    position: absolute;
+    width: 20px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background-color: red;
+}
+.game-board-block .players-piece{
+    padding: 3rem;
+    position: absolute;
+}
+.game-board-block .players-piece.single{
+    background-color: rgba(255, 166, 0, 0.311);
+}
+.game-board-block .players-piece.double{
+    background-color: rgba(0, 128, 0, 0.53);
+}
+.game-board-block .players-piece.triple{
+    background-color: rgba(128, 0, 128, 0.379);
+}
+.game-board-block .players-piece.triple .piece:nth-child(1){
+    top: 40%;
+    left: 10%;
+}
+.game-board-block .players-piece.triple .piece:nth-child(2){
+    top: 40%;
+    left: 40%;
+}
+.game-board-block .players-piece.triple .piece:nth-child(3){
+    top: 40%;
+    left: 70%;
+}
+.game-board-block .players-piece.single .piece{
+    top: 43%;
+    left: 40%;
+}
+.game-board-block .players-piece.double .piece:nth-child(1){
+    left: 15%;
+    top: 40%;
+}
+.game-board-block .players-piece.double .piece:nth-child(2){
+    right: 15%;
+    top: 40%;
+}
+.game-board-block.ticket{
     display: flex;
     flex-direction: column;
     align-items: center;
