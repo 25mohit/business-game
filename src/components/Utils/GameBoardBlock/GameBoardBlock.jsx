@@ -7,7 +7,7 @@ const GameBoardBlock = ({ ticket, playerPositions, index }) => {
     <div className={`game-board-block ${ticket?.blockType}`}>
       <p className='city-name'>{ticket?.cityName}</p>
       <div className="bar"></div>
-      {ticket?.index}
+      {/* {ticket?.index} */}
       <p className="ticket-price">{ticket?.ticketPrice}</p>
       <div className={`players-piece ${GetPlayerPosition(ticket.index, playerPositions)}`}>
         { ticket.index === playerPositions?.player1 &&<PlayerPiece /> }
