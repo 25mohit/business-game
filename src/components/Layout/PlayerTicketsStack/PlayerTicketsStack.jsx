@@ -33,7 +33,7 @@ const PlayerTicketsStack = ({ ticketsList }) => {
     //         ticketName:"Jodhpur"
     //     },
     // ]
-    console.log("ticketsList", ticketsList, ticketList);
+    // console.log("ticketsList", ticketsList, ticketList);
   return (
     <div className='tickets-stack flex-column'>
         {
