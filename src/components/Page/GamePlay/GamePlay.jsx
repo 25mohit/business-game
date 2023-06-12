@@ -30,28 +30,20 @@ const GamePlay = () => {
     }
   })
  
-  // console.log(playerPositions, diceValue);
   const increasePlayerPosition = (playerTurn, diceVal) => {
-    console.log(playerTurn.player1, playerTurn.player2);
     if(playerTurn.player1){
       for (let i = 0; i <= diceVal; i++) {
         setTimeout(() => {
-          // console.log("Loop iteration:", i + 1, i, diceVal);
           if(i === diceVal){
             setPlayerTurn({player1: !playerTurn.player1, player2: !playerTurn.player2,  })
           }
           setPlayerPositions({player1: playerPositions.player1+ i , player2: playerPositions.player2})   
         }, (i + 1) * 700);
       }
-      
-      // setPlayerTurn({player1: !playerTurn.player1, player2: !playerTurn.player2,  })
-
-      // console.log("asas",player, playerPositions, diceVal);
     }
     else if(playerTurn.player2){
       for (let i = 0; i <= diceVal; i++) {
         setTimeout(() => {
-          // console.log("Loop iteration:", i + 1, i, diceVal);
           if(i === diceVal){
             setPlayerTurn({player2: !playerTurn.player2, player1: !playerTurn.player1,  })
           }
@@ -66,13 +58,11 @@ const GamePlay = () => {
       const isIncludesPlayer1 = gameProgressHandler.player1.buyed.includes(boardBlocks[(playerPositions.player1 -1 )+ diceValue.player1]?.cityName)
       const isIncludesPlayer2 = gameProgressHandler.player2.buyed.includes(boardBlocks[(playerPositions.player2 -1 )+ diceValue.player2]?.cityName)
 
-      // console.log("isIncludesPlayer1",diceValue.player1, playerPositions.player1);
       const cityName1 = boardBlocks[(playerPositions.player1 - 1)+ diceValue.player1]?.cityName
       const cityName2 = boardBlocks[(playerPositions.player2 - 1)+ diceValue.player2]?.cityName
 
       if(playerTurn.player1){
         const ticketPrice = boardBlocks[(playerPositions.player1 - 1)+ diceValue.player1]?.ticketPrice
-        // console.log("Yes", boardBlocks[(playerPositions.player1 - 1)+ diceValue.player1]);
         
         if(!isIncludesPlayer1 && !isIncludesPlayer2){
           if(playerAmount.player1.remeaning > 0 && playerAmount.player1.remeaning >=  ticketPrice){
@@ -88,8 +78,8 @@ const GamePlay = () => {
         }
       }else if(playerTurn.player2){
         const ticketPrice = boardBlocks[(playerPositions.player2 - 1)+ diceValue.player2]?.ticketPrice
-        // console.log("Yes", boardBlocks[(playerPositions.player2 - 1)+ diceValue.player2]);
-        // console.log(isIncludesPlayer2,isIncludesPlayer1, gameProgressHandler,boardBlocks,playerPositions,diceValue, gameProgressHandler.player1.buyed.includes(boardBlocks[(playerPositions.player1 -1 )+ diceValue.player1])   );
+       
+        
         if(!isIncludesPlayer2 && !isIncludesPlayer1){
           if(playerAmount.player2.remeaning > 0 && playerAmount.player2.remeaning >=  ticketPrice){
             setPlayerAmount({...playerAmount, player2:{remeaning: playerAmount.player2.remeaning - ticketPrice, wage: playerAmount.player2.wage + ticketPrice}})
@@ -97,8 +87,6 @@ const GamePlay = () => {
 
             increasePlayerPosition(playerTurn, diceValue.player2)
 
-            // setPlayerPositions({player2: playerPositions.player2+ diceValue.player2 , player1: playerPositions.player1})   
-            // setPlayerTurn({player2: !playerTurn.player2, player1: !playerTurn.player1,  })
           } else {
             alert("You balance is LOW B")
           }
