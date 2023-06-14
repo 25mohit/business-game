@@ -7,33 +7,7 @@ const PlayerTicketsStack = ({ ticketsList }) => {
     useEffect(() => {
         setTicketList(ticketsList)
     },[ticketsList])
-    // const ticketsList = [
-    //     {
-    //         ticketPrice: 1500,
-    //         ticketName:"Jaipur"
-    //     },
-    //     {
-    //         ticketPrice: 1500,
-    //         ticketName:"Dausa"
-    //     },
-    //     {
-    //         ticketPrice: 1500,
-    //         ticketName:"Jodhpur"
-    //     },
-    //     {
-    //         ticketPrice: 1500,
-    //         ticketName:"Jaipur"
-    //     },
-    //     {
-    //         ticketPrice: 1500,
-    //         ticketName:"Dausa"
-    //     },
-    //     {
-    //         ticketPrice: 1500,
-    //         ticketName:"Jodhpur"
-    //     },
-    // ]
-    // console.log("ticketsList", ticketsList, ticketList);
+    
   return (
     <div className='tickets-stack flex-column'>
         {

@@ -6,7 +6,7 @@ const GameBoardBlock = ({ ticket, playerPositions, index }) => {
   return (
     <div className={`game-board-block ${ticket?.blockType}`}>
       <p className='city-name'>{ticket?.cityName}</p>
-      <div className="bar"></div>
+      <div className="bar" />
       {ticket?.index}
       <p className="ticket-price">{ticket?.ticketPrice}</p>
       <div className={`players-piece ${GetPlayerPosition(ticket.index, playerPositions)}`}>

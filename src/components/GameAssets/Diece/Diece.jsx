@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const Diece = ({ diceValue, clicked, setClicked, setDiceValue, playerTurn, setPlayerTurn, currentDiece, currentPlayer }) => {
 // console.log(diceValue);

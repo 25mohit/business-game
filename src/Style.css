@@ -223,9 +223,13 @@
     align-items: center;
     gap: 0.4rem;
     padding: 0.4rem;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 .tickets-stack .ticket:nth-child(1){
-    background-color: gray;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     z-index: 10;
     width: 90%;
     bottom: 0;
@@ -236,35 +240,38 @@
     box-shadow: none;
 }
 .tickets-stack .ticket:nth-child(2){
-    background-color: greenyellow;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
     bottom: 2rem;
     left: 22px;
     width: 85%;
     z-index: 9;
 }
 .tickets-stack .ticket:nth-child(3){
-    background-color: orange;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     bottom: 4rem;
     left: 36px;
     width: 80%;
     z-index: 8;
 }
 .tickets-stack .ticket:nth-child(4){
-    background-color: blue;
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
     bottom: 6rem;
     left: 43px;
     width: 75%;
     z-index: 7;
 }
 .tickets-stack .ticket:nth-child(5){
-    background-color: blueviolet;
+    background-image: linear-gradient( 291.7deg,  rgba(255,134,134,1) 21.5%, rgba(249,141,255,1) 93.1% );
     bottom: 8rem;
     left: 49px;
     width: 70%;
     z-index: 6;
 }
 .tickets-stack .ticket:nth-child(6){
-    background-color: green;
+    background-image: linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% );
     bottom: 10rem;
     left: 56px;
     width: 65%;
