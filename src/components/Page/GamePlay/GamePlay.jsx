@@ -10,8 +10,8 @@ const GamePlay = () => {
     player2: false
   })
   const [playerAmount, setPlayerAmount] = useState({
-    player1: {remeaning: 5000, wage: 0},
-    player2: {remeaning: 5000, wage: 0},
+    player1: {remeaning: 45000, wage: 0},
+    player2: {remeaning: 35000, wage: 0},
   })
   const [diceValue, setDiceValue] = useState({
     player1:0,
@@ -31,13 +31,19 @@ const GamePlay = () => {
   })
  
   const increasePlayerPosition = (playerTurn, diceVal) => {
+    
+    const cityName1 = boardBlocks[(playerPositions.player1 - 1)+ diceValue.player1]?.cityName
+    const cityName2 = boardBlocks[(playerPositions.player2 - 1)+ diceValue.player2]?.cityName
+
     if(playerTurn.player1){
       for (let i = 0; i <= diceVal; i++) {
         setTimeout(() => {
           if(i === diceVal){
             setPlayerTurn({player1: !playerTurn.player1, player2: !playerTurn.player2,  })
+            setGameProgressHandler({...gameProgressHandler, player1:{...gameProgressHandler.player1, buyed:[...gameProgressHandler.player1.buyed, cityName1 ]}})
           }
-          setPlayerPositions({player1: playerPositions.player1+ i , player2: playerPositions.player2})   
+          setPlayerPositions({player1: playerPositions.player1+ i , player2: playerPositions.player2})           
+
         }, (i + 1) * 700);
       }
     }
@@ -46,6 +52,7 @@ const GamePlay = () => {
         setTimeout(() => {
           if(i === diceVal){
             setPlayerTurn({player2: !playerTurn.player2, player1: !playerTurn.player1,  })
+            setGameProgressHandler({...gameProgressHandler, player2:{...gameProgressHandler.player2, buyed:[...gameProgressHandler.player2.buyed, cityName2 ]}})
           }
           setPlayerPositions({player2: playerPositions.player2+ i , player1: playerPositions.player1})   
         }, (i + 1) * 700);
@@ -58,8 +65,6 @@ const GamePlay = () => {
       const isIncludesPlayer1 = gameProgressHandler.player1.buyed.includes(boardBlocks[(playerPositions.player1 -1 )+ diceValue.player1]?.cityName)
       const isIncludesPlayer2 = gameProgressHandler.player2.buyed.includes(boardBlocks[(playerPositions.player2 -1 )+ diceValue.player2]?.cityName)
 
-      const cityName1 = boardBlocks[(playerPositions.player1 - 1)+ diceValue.player1]?.cityName
-      const cityName2 = boardBlocks[(playerPositions.player2 - 1)+ diceValue.player2]?.cityName
 
       if(playerTurn.player1){
         const ticketPrice = boardBlocks[(playerPositions.player1 - 1)+ diceValue.player1]?.ticketPrice
@@ -67,7 +72,6 @@ const GamePlay = () => {
         if(!isIncludesPlayer1 && !isIncludesPlayer2){
           if(playerAmount.player1.remeaning > 0 && playerAmount.player1.remeaning >=  ticketPrice){
             setPlayerAmount({...playerAmount, player1:{remeaning: playerAmount.player1.remeaning - ticketPrice, wage: playerAmount.player1.wage + ticketPrice}})
-            setGameProgressHandler({...gameProgressHandler, player1:{...gameProgressHandler.player1, buyed:[...gameProgressHandler.player1.buyed, cityName1 ]}})
             
             increasePlayerPosition(playerTurn, diceValue.player1)
           } else {
@@ -83,7 +87,6 @@ const GamePlay = () => {
         if(!isIncludesPlayer2 && !isIncludesPlayer1){
           if(playerAmount.player2.remeaning > 0 && playerAmount.player2.remeaning >=  ticketPrice){
             setPlayerAmount({...playerAmount, player2:{remeaning: playerAmount.player2.remeaning - ticketPrice, wage: playerAmount.player2.wage + ticketPrice}})
-            setGameProgressHandler({...gameProgressHandler, player2:{...gameProgressHandler.player2, buyed:[...gameProgressHandler.player2.buyed, cityName2 ]}})
 
             increasePlayerPosition(playerTurn, diceValue.player2)
 
@@ -96,6 +99,8 @@ const GamePlay = () => {
       } 
     }
   },[diceValue])
+
+  console.log("playerPositions", playerPositions);
 
   return (
     <div className='game-play'>

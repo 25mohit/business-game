@@ -2,52 +2,52 @@ export const GameBlockList = [
         {
             blockType: "start",
             cityName: "Start",
-            ticketPrice: 1000,
+            ticketPrice: 0,
         },
         {
             blockType: "ticket",
             cityName: "Udaipur",
-            ticketPrice: 1000
+            ticketPrice: 2000
         },
         {
             blockType: "ticket",
             cityName: "Nagpur",
-            ticketPrice: 1000
+            ticketPrice: 1500
         },
         {
             blockType: "ticket",
             cityName: "Banglore",
-            ticketPrice: 1000
+            ticketPrice: 2500
         },
         {
             blockType: "ticket",
             cityName: "Punjab",
-            ticketPrice: 1000
+            ticketPrice: 500
         },
         {
             blockType: "ticket",
             cityName: "Indoore",
-            ticketPrice: 1000
+            ticketPrice: 100
         },
         {
             blockType: "ticket",
             cityName: "Kashmir",
-            ticketPrice: 1000
+            ticketPrice: 200
         },
         {
             blockType: "ticket",
             cityName: "Chance",
-            ticketPrice: 1000
+            ticketPrice: 0
         },
         {
             blockType: "ticket",
             cityName: "Mumbai",
-            ticketPrice: 1000
+            ticketPrice: 8000
         },
         {
             blockType: "ticket",
             cityName: "Sikar",
-            ticketPrice: 1000
+            ticketPrice: 6000
         },
         {
             blockType: "ticket",
@@ -57,37 +57,37 @@ export const GameBlockList = [
         {
             blockType: "ticket",
             cityName: "Ahemdabad",
-            ticketPrice: 1000
+            ticketPrice: 1100
         },
         {
             blockType: "ticket",
             cityName: "Gujrat",
-            ticketPrice: 1000
+            ticketPrice: 1300
         },
         {
             blockType: "ticket",
             cityName: "Kota",
-            ticketPrice: 1000
+            ticketPrice: 236
         },
         {
             blockType: "ticket",
             cityName: "Nanital",
-            ticketPrice: 1000
+            ticketPrice: 145
         },
         {
             blockType: "ticket",
             cityName: "Alwar",
-            ticketPrice: 1000
+            ticketPrice: 800
         },
         {
             blockType: "ticket",
             cityName: "Kathmandu",
-            ticketPrice: 1000
+            ticketPrice: 900
         },
         {
             blockType: "ticket",
-            cityName: "Start",
-            ticketPrice: 1000
+            cityName: "Bundi",
+            ticketPrice: 1500
         },
         {
             blockType: "ticket",
@@ -102,21 +102,21 @@ export const GameBlockList = [
         {
             blockType: "ticket",
             cityName: "Ujjain",
-            ticketPrice: 1000
+            ticketPrice: 100
         },
         {
             blockType: "ticket",
             cityName: "Mount Abu",
-            ticketPrice: 1000
+            ticketPrice: 50
         },
         {
             blockType: "ticket",
             cityName: "Srinagar",
-            ticketPrice: 1000
+            ticketPrice: 200
         },
         {
             blockType: "ticket",
             cityName: "Pune",
-            ticketPrice: 1000
+            ticketPrice: 3000
         },
 ]

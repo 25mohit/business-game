@@ -1,6 +1,15 @@
+import { useEffect, useState } from "react";
+
 const Diece = ({ diceValue, setDiceValue, playerTurn, setPlayerTurn, currentDiece, currentPlayer }) => {
 // console.log(diceValue);
+  const [alreadyClicked, setAlreadyClicked] = useState(false)
+
+  useEffect(() => {
+    setAlreadyClicked(false)
+  },[playerTurn])
+
   const onDiceClickHandler = () => {
+    setAlreadyClicked(true)
     if(currentPlayer){
       // console.log(playerTurn);
       if(playerTurn.player1){
@@ -18,7 +27,7 @@ const Diece = ({ diceValue, setDiceValue, playerTurn, setPlayerTurn, currentDiec
     // console.log();
   }
   return (
-    <div className='diece flex-center' onClick={onDiceClickHandler}>
+    <div className={`diece flex-center ${alreadyClicked ? 'in-progress' : ''}`} onClick={!alreadyClicked ? onDiceClickHandler : null}>
       <span className="text">{currentDiece}</span>
     </div>
   )
