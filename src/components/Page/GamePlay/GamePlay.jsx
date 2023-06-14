@@ -29,6 +29,7 @@ const GamePlay = () => {
       buyed:[]
     }
   })
+  const [alreadyClicked, setAlreadyClicked] = useState(false)
  
   const increasePlayerPosition = (playerTurn, diceVal) => {
     
@@ -104,9 +105,9 @@ const GamePlay = () => {
 
   return (
     <div className='game-play'>
-      <PlayerStatsBoard amount={playerAmount.player1} gameProgress={gameProgressHandler.player1} allPlayerTurn={playerTurn} diceValue={diceValue} currentDiece={diceValue.player1} setDiceValue={setDiceValue} playerTurn={playerTurn.player1} setPlayerTurn={setPlayerTurn}/>
+      <PlayerStatsBoard setClicked={setAlreadyClicked} clicked={alreadyClicked} amount={playerAmount.player1} gameProgress={gameProgressHandler.player1} allPlayerTurn={playerTurn} diceValue={diceValue} currentDiece={diceValue.player1} setDiceValue={setDiceValue} playerTurn={playerTurn.player1} setPlayerTurn={setPlayerTurn}/>
       <MainBoard setPlayerPositions={setPlayerPositions} playerPositions={playerPositions} boardBlocks={boardBlocks} setBoardBlocks={setBoardBlocks}/>
-      <PlayerStatsBoard amount={playerAmount.player2} gameProgress={gameProgressHandler.player2} allPlayerTurn={playerTurn} diceValue={diceValue} currentDiece={diceValue.player2} setDiceValue={setDiceValue} playerTurn={playerTurn.player2} setPlayerTurn={setPlayerTurn}/>
+      <PlayerStatsBoard setClicked={setAlreadyClicked} clicked={alreadyClicked} amount={playerAmount.player2} gameProgress={gameProgressHandler.player2} allPlayerTurn={playerTurn} diceValue={diceValue} currentDiece={diceValue.player2} setDiceValue={setDiceValue} playerTurn={playerTurn.player2} setPlayerTurn={setPlayerTurn}/>
     </div>
   )
 }

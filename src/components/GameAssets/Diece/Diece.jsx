@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 
-const Diece = ({ diceValue, setDiceValue, playerTurn, setPlayerTurn, currentDiece, currentPlayer }) => {
+const Diece = ({ diceValue, clicked, setClicked, setDiceValue, playerTurn, setPlayerTurn, currentDiece, currentPlayer }) => {
 // console.log(diceValue);
-  const [alreadyClicked, setAlreadyClicked] = useState(false)
 
   useEffect(() => {
-    setAlreadyClicked(false)
+    setClicked(false)
   },[playerTurn])
 
   const onDiceClickHandler = () => {
-    setAlreadyClicked(true)
-    if(currentPlayer){
+    setClicked(true)
+    if(currentPlayer && !clicked){
       // console.log(playerTurn);
       if(playerTurn.player1){
         setDiceValue({...diceValue, player1:Math.ceil(Math.random()*6)})
@@ -21,13 +20,14 @@ const Diece = ({ diceValue, setDiceValue, playerTurn, setPlayerTurn, currentDiec
         // setPlayerTurn({player1: !playerTurn.player1, player2: !playerTurn.player2,  })
         
       }
-    } else {
+    } else if(!currentPlayer && clicked){
       alert("NOT YOUR TURN")
     }
     // console.log();
   }
+  console.log("currentPlayer", currentPlayer)
   return (
-    <div className={`diece flex-center ${alreadyClicked ? 'in-progress' : ''}`} onClick={!alreadyClicked ? onDiceClickHandler : null}>
+    <div className={`diece flex-center ${clicked && currentPlayer ? 'in-progress' : ''}`} onClick={onDiceClickHandler}>
       <span className="text">{currentDiece}</span>
     </div>
   )

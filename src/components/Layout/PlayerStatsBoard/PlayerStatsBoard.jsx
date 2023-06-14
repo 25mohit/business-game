@@ -2,7 +2,7 @@ import React from 'react'
 import PlayerTicketsStack from '../PlayerTicketsStack/PlayerTicketsStack'
 import Diece from '../../GameAssets/Diece/Diece'
 
-const PlayerStatsBoard = ({ playerTurn, diceValue, setDiceValue, allPlayerTurn, setPlayerTurn, currentDiece, amount, gameProgress }) => {
+const PlayerStatsBoard = ({ setClicked, clicked, playerTurn, diceValue, setDiceValue, allPlayerTurn, setPlayerTurn, currentDiece, amount, gameProgress }) => {
 
   return (
     <div className={`player-stats-container flex-column ${playerTurn ? 'active-player': ''}`}>
@@ -15,7 +15,7 @@ const PlayerStatsBoard = ({ playerTurn, diceValue, setDiceValue, allPlayerTurn, 
         </header>
       </div>
       <div className="dice-container flex-center">
-        <Diece currentPlayer={playerTurn} currentDiece={currentDiece} setPlayerTurn={setPlayerTurn} diceValue={diceValue} setDiceValue={setDiceValue} playerTurn={allPlayerTurn}/>
+        <Diece clicked={clicked} setClicked={setClicked} currentPlayer={playerTurn} currentDiece={currentDiece} setPlayerTurn={setPlayerTurn} diceValue={diceValue} setDiceValue={setDiceValue} playerTurn={allPlayerTurn}/>
       </div>
       <PlayerTicketsStack ticketsList={gameProgress.buyed}/>
     </div>
