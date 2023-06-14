@@ -5,15 +5,22 @@
     width: 100%;
     height: 100%;
     padding: 0 2rem;
-}
+    position: relative;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); */
+}   
 .main-game-board{
-    background-color: rgba(237, 237, 237, 0.734);
     height: 67vh;
+    background-color: rgba(255, 255, 255, 0.384);
+    backdrop-filter: blur(3px);
     aspect-ratio: 1/1;
     position: relative;
 }   
 .main-game-board .block-row{
     position: absolute;
+    background-image: radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% );
+    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(249,232,51,1) 0%, rgba(250,196,59,1) 100.2% ); */
+    backdrop-filter: blur(3px);
 }
 .main-game-board .block-row.top{
     top: -13.4vh;
@@ -52,13 +59,15 @@
     overflow: hidden;
 }
 .game-board-block{
-    background-color: rgba(0, 128, 0, 0.453);
+    /* background-color: rgba(0, 128, 0, 0.453); */
     height: 13.4vh;
-    border: 1px solid gray;
+    border: 0.001rem solid rgba(255, 79, 79, 0.466);
     aspect-ratio: 1/1;
     padding: 0.4rem;
     overflow: hidden;
+    
 }
+
 
 .piece{
     position: absolute;
@@ -125,7 +134,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.3rem;
+    gap: 0.8rem;
 }
 .game-board-block.start{
     display: flex;
@@ -136,10 +145,10 @@
     gap: 0.3rem;
 }
 .city-name{
-    color: red;
+    color: white;
 }
 .ticket-price{
-    color: green;
+    color: white;
     font-size: 0.9rem;
 }
 .bar{
@@ -179,12 +188,17 @@
     width: 22%;
     height: 96%;
     box-shadow: 1px 1px 15px 1px rgba(150,150,150,0.4);
-    border: 2px solid white;
+    /* border: 2px solid transparent; */
+    background-color: rgba(255, 255, 255, 0.352);
+    backdrop-filter: blur(3px);
     justify-content: space-between;
 }
 .player-stats-container.active-player{
-    border: 2px solid rgb(45, 192, 45);
-    box-shadow: 1px 1px 10px 2px rgba(7, 152, 7, 0.718);
+    
+    /* border: 2px solid rgb(45, 192, 45); */
+    /* background-image: radial-gradient( circle 763px at 18.3% 24.1%,  rgba(255,249,137,1) 7.4%, rgba(226,183,40,1) 58.3% );
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(249,232,51,1) 0%, rgba(250,196,59,1) 100.2% ); */
+    box-shadow: 0px 0px 5px 2px white ;
 }
 .dice-container{
     margin-bottom: 30%;
