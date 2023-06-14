@@ -164,7 +164,7 @@
     font-size: 0.9rem;
 }
 .bar{
-    background-color: orange;
+    background-color: rgba(255, 166, 0, 0.812);
     width: 100%;
     height: 5px;
     border-radius: 10px;
